@@ -1,0 +1,38 @@
+<xml>
+	
+	<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+	
+	<files id="common">
+		
+		<compilerflag value="-Iinclude"/>
+		
+		<file name="common/ExternalInterface.cpp"/>
+		
+	</files>
+	
+	<set name="SLIBEXT" value=".lib" if="windows"/>
+	<set name="SLIBEXT" value=".a" unless="windows"/>
+	<set name="SLIBEXT" value=".so" if="webos"/>
+	
+	<set name="DEBUGEXTRA" value="-debug" if="fulldebug" />
+	
+	<target id="NDLL" output="${LIBPREFIX}kartridge${MSVC_LIB_VERSION}${DEBUGEXTRA}${LIBEXTRA}" tool="linker" toolid="${STD_MODULE_LINK}">
+		
+		
+		<ext value=".ndll" if="windows || mac || linux"/>
+		<files id="common"/>
+		
+		<lib name="lib/kartridge-sdk/Windows/kartridge-sdk-x86.lib" if="windows" />
+		<lib name="lib/kartridge-sdk/OSX/libkartridge-sdk.dylib" if="mac" />
+		
+		<outdir name="../ndll/${BINDIR}"/>
+		
+	</target>
+	
+	<target id="default">
+		
+		<target id="NDLL"/>
+		
+	</target>
+	
+</xml>

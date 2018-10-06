@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<ndll name="kartridge" />
+	
+	<dependency path="project/lib/kartridge-sdk/Windows/kartridge-sdk-x86.dll" if="windows" />
+	<dependency path="project/lib/kartridge-sdk/OSX/libkartridge-sdk.dylib" if="mac" />
+	
+</project>
