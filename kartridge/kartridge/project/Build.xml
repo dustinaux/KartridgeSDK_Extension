@@ -23,7 +23,7 @@
 		<files id="common"/>
 		
 		<lib name="lib/kartridge-sdk/Windows/kartridge-sdk-x86.lib" if="windows" />
-		<lib name="lib/kartridge-sdk/OSX/libkartridge-sdk.dylib" if="mac" />
+		<lib name="lib/kartridge-sdk/OSX/libkartridge-sdk.a" if="mac" />
 		
 		<outdir name="../ndll/${BINDIR}"/>
 		
