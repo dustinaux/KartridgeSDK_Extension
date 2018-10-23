@@ -1,6 +1,8 @@
 package;
 
+
 import lime.system.CFFI;
+
 
 class Kartridge
 {
