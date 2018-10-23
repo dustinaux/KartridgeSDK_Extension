@@ -1,12 +1,12 @@
 # KartridgeSDK_Extension
 Haxe Extension for the Kartridge SDK
 
-Currently only windows is working - maybe someone more knowledgeable than me can figure out how to build for mac?
-
 ## Instructions
 1. Put the kartridge folder in your game project somewhere, like in a "libs" folder
 
 2. Include it by adding to your project.xml: `<include path="libs/kartridge"/>`
+
+3. See kartridge/Example for a usage example
 
 ### Kartridge SDK
 Included is Kartridge SDK 1.0.2

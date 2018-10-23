@@ -7,6 +7,7 @@
 		<compilerflag value="-Iinclude"/>
 		
 		<file name="common/ExternalInterface.cpp"/>
+		<!--<file name="common/Kartridge.cpp"/>-->
 		
 	</files>
 	
